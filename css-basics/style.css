@@ -1,0 +1,14 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: crimson;
+    font-size: 30px;
+    background-color: black;
+}
+
+p {
+    color: rgb(66, 63, 66);
+    font-size: 20px;
+}
