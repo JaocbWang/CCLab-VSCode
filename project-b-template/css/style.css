@@ -34,12 +34,56 @@ p {
   align-items: center;
 }
 
-.interface-container {
-  background-color: gray;
+.main-container2 {
+  background-color: whitesmoke;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-container3 {
+  background-color: blanchedalmond;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interface-container {
+  background-color: whitesmoke;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-interface-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: x-large;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+a {
+  font-family: fantasy;
+  font-stretch: expanded;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+p1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10px;
 }
 
 /* FLEXBOX PROPERTIES */

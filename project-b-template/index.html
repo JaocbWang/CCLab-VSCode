@@ -7,17 +7,35 @@
   <title>Project</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/lib/p5.js"></script>
+  <script src="js/lib/p5.sound.js"></script>
+  <script src="js/main.js" defer></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
 </head>
 
-<body>
-
+<body><canvas id="myCanvas" width="400" height="400"></canvas>
   <div class="container-landing-page">
-    <h1>Title</h1>
+    <h1>Purrfection</h1>
     <p>
-      <a href="main.html">Link</a>
+      <!-- Canvas element for p5.js -->
+      <canvas id="myCanvas" width="400" height="400"></canvas>
+      </br>
     </p>
-  </div>
+    <div class="title-interface-container">
+      <button id="changeImageButtons">Change Background Picture!</button>
+    </div>
 
+    <a href="main.html">Continue</a>
+  </div>
 </body>
 
 </html>
