@@ -10,6 +10,7 @@
 
     <script src="js/lib/p5.js"></script>
     <script src="js/lib/p5.sound.js"></script>
+    <script src="js/pageTwo.js"></script>
     <style>
         body {
             display: flex;
@@ -17,7 +18,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            flex-direction: column;
+            flex-direction: row;
         }
     </style>
 </head>
@@ -25,16 +26,24 @@
 <body>
     <p1>Insert Instructions here</p1>
     <p1>Insert Instructions here</p1>
-    <div class="main-container3">
-        <canvas id="myCanvas" width="550" height="550"></canvas>
+
+    <div id="canvas-container">
         <!-- p5.js canvas will be appended here! -->
     </div>
 
-    <div class="interface-container">
+    <div class="image-interface-container">
+        <div class="imageButtons">
 
+            <img id="imageTwo" src="js/cat6.jpg" alt="catmeteorpng">
+
+        </div>
+        <div class="imageButtons">
+
+            <img id="imageOne" src="js/cat7.jpg" alt="catstarpng">
+
+        </div>
     </div>
 
-    <script src="js/main.js"></script>
 </body>
 
 </html>
