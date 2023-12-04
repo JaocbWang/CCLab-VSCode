@@ -30,7 +30,7 @@ function setup() {
   background(bg0);
 
   let button = select('#changeImageButtons');
-  button.style("color", "#80669d");
+  button.style("color", "#9F2B68");
   button.style("font-size", "15px");
   button.mousePressed(changeImage);
 

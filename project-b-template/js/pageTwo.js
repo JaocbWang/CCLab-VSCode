@@ -12,6 +12,8 @@ let yStart;
 let picture1;
 let bg6;
 let bg7;
+let bg8;
+let bg9;
 let meteors = [];
 let explosions = [];
 let starsTwo = [];
@@ -20,23 +22,28 @@ let meteorFunc = false;
 let starFunc = false;
 let makeNewMeteors = false;
 let makeNewStars = false;
+let moonGo;
+
 
 function preload() {
     bg6 = loadImage("js/cat6.jpg");
     bg7 = loadImage("js/cat7.jpg");
-
+    bg8 = loadImage("js/moon.png");
+    bg9 = loadImage("js/cat9.png");
 }
 
 
 function setup() {
 
-    let cnv = createCanvas(1000, 900);
+    let cnv = createCanvas(800, 700);
     cnv.parent('canvas-container');
 
 
     for (let i = 0; i < 150; i++) {
         stars.push(new Star());
     }
+
+    moonGo = new Moon();
 
     let buttonOne = select('#imageOne');
     buttonOne.mousePressed(starBegin);
@@ -96,11 +103,12 @@ function draw() {
     background(0, 25);
 
     let topColor = color(0, 1); // Black
-    let bottomColor = color(0, 0, 60); // Galaxy Blue
+    let bottomColor = color(0, 0, 60, 100); // Galaxy Blue
 
     for (let y = 0; y < height; y++) {
         let inter = map(y, 0, height, 0, 1);
         let gradientColor = lerpColor(topColor, bottomColor, inter);
+        noStroke();
         stroke(gradientColor);
         line(0, y, width, y);
     }
@@ -115,6 +123,12 @@ function draw() {
     }
     pop();
 
+    //Moon
+    push();
+    translate(width / 2 - 75, height / 2 - 75);
+    moonGo.update();
+    moonGo.draw();
+    pop();
 
     //For class Meteor, explosion, particle
     if (meteorFunc) {
@@ -181,7 +195,24 @@ class Star {
     }
 }
 
+class Moon {
+    constructor() {
+        this.angle = random(TWO_PI);
+        this.speed = .015;
+    }
 
+    update() {
+        this.angle += this.speed;
+    }
+
+    draw() {
+        let x = 300 * cos(this.angle);
+        let y = 300 * sin(this.angle);
+        image(bg8, x, y, 150, 150);
+        tint(255, 127);
+        image(bg9, x + 25, y + 25, 100, 100);
+    }
+}
 
 //The first cat picture if pressed would summon meteors
 class Meteor {
